@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Table With Edit Section</title>
+    <meta charset="windows-1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Car Name*</label><label class="validation-error hide" id="carNameValidationError">This field is required.</label>
+                        <input type="text" name="carName" id="carName">
+                    </div>
+                    <div>
+                        <label>Model</label>
+                        <input type="text" name="carModel" id="carModel">
+                    </div>
+                    <div>
+                        <label>Price</label>
+                        <input type="text" name="carPrice" id="carPrice">
+                    </div>
+                    <div>
+                        <label>Color</label>
+                        <input type="text" name="carColor" id="carColor">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="carPropertiesList">
+                    <thead>
+                        <tr>
+                            <th>Car Name</th>
+                            <th>Car Model</th>
+                            <th>Car Price</th>
+                            <th>Car Color</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- link JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
